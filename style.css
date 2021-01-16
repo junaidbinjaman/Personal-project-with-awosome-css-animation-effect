@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass {
+    height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(225, 225, 225, 0.3));
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+    display: flex;
+    z-index: 2;
+}
+
+.ball1,
+.ball2 {
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 1), rgba(225, 225, 225, 0.3));
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: 50%;
+    position: relative;
+}
+
+.ball1 {
+    top: 60%;
+    left: 10%;
+    position: absolute;
+    animation: animation3 3s ease;
+}
+
+.ball2 {
+    right: 10%;
+    top: 5%;
+    position: absolute;
+    animation: animation4 3s ease;
+}
+
+@keyframes animation3 {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes animation4 {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 10%;
+    }
+}
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(225, 225, 225, 0.3));
+    border-radius: 2rem;
+}
+
+.nav1 {
+    display: flex;
+    padding: 1rem 5rem;
+    align-items: center;
+}
+
+.avater {
+    text-align: center;
+}
+
+.avater img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.avater h3 {
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.nav1 h2 {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+    padding: 0 2rem;
+}
+
+.pro {
+    display: flex;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pro {
+    width: 80%;
+}
+
+.pro h2 {
+    width: 40%;
+    color: white;
+    font-weight: 600;
+}
+
+.active input {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(225, 225, 225, 0.3));
+    border: none;
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.detail-area {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 5rem;
+}
+
+.active h1 {
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    -webkit-text-stroke: 3px #658ec6;
+}
+
+.active h1:before {
+    content: attr(data-text);
+    color: #658ec6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-right: 3px solid #658ec6;
+    overflow: hidden;
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+    0% {
+        width: 0%;
+    }
+    70% {
+        width: 54%;
+    }
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(to left top, rgba(255, 255, 255, 1), rgba(225, 225, 225, 0.8));
+    border-radius: 1rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+.card h2 {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.percentage {
+    font-weight: 600;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.progress {
+    height: 25%;
+    width: 100%;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    animation: animation2 5s;
+}
+
+.progress:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(236, 236, 236);
+    left: 60%;
+}
+
+@keyframes animation2 {
+    0% {
+        width: 0%;
+    }
+    60% {
+        width: 100%;
+    }
+}
